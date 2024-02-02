@@ -22,7 +22,7 @@ export default function Home() {
 						s'appelle GYS : c'est une entreprise de production d'appareil de
 						soudure. Vous pourrez retrouver plus d'informations quant à mon
 						alternance dans la section{" "}
-						<a href="" className="italic text-cyan-800">
+						<a href="/alternance" className="italic text-cyan-800">
 							Alternance
 						</a>
 						.
