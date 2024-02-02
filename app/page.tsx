@@ -28,12 +28,10 @@ export default function Home() {
 						.
 					</p>
 				</div>
-				<Image
+				<img
 					src="/images/photo_profil.webp"
 					alt="Picture of the author"
 					className="rounded-full border-4 border-gray-900 shadow-lg bg-gray-100 p-2 w-2/6"
-					width={500}
-					height={500}
 				/>
 			</div>
 		</main>
