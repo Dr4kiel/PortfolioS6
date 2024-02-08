@@ -2,32 +2,137 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  font-size: 16px;
+  /* Default font size */
 }
+
+
+.flex-dynamic {
+  display: flex;
+  flex-direction: row;
+  /* Default flex direction */
+}
+
+.flex-dynamic-reversed {
+  display: flex;
+  flex-direction: row;
+  /* Default flex direction */
+}
+
+.title {
+  @apply text-8xl;
+  @apply text-balance;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  font-weight: bold;
+}
+
+.center-dynamic {}
+
+@media (max-width: 640px) {
+
+  body {
+    font-size: 14px;
+    /* Font size for smaller screens */
+  }
+
+  .title {
+    font-size: 4rem;
+    /* Font size for smaller screens */
+  }
+
+  .nav-sticked {
+    display: none;
+    /* Hide navigation for smaller screens */
+  }
+
+  .round-button {
+    width: 50px;
+    height: 50px;
+    @apply text-sm;
+    /* Adjust button size for smaller screens */
+  }
+
+  .spacer {
+    height: 100px;
+    /* Adjust spacer height for smaller screens */
+  }
+
+  .flex-dynamic {
+    flex-direction: column-reverse;
+    /* Change flex direction to row for smaller screens */
+  }
+
+  .flex-dynamic-reversed {
+    flex-direction: column;
+    /* Change flex direction to row for smaller screens */
+  }
+
+  .center-dynamic {
+    @apply items-center;
+    /* Center align for smaller screens */
+  }
+}
+
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.nav-sticked {
+  @apply fixed;
+  @apply top-0;
+  @apply left-0;
+  @apply right-0;
+  @apply z-50;
+  @apply shadow-md;
+}
+
+.round-button:hover {
+  @apply bg-blue-500;
+  color: white;
+  transform-origin: center;
+  transition: background-color 0.4s, color 0.5s;
+  background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.5) 100%);
+}
+
+.spacer {}
+
+.spacer-sm {
+  @apply h-64;
+}
+
+@media (min-width: 640px) {
+  .spacer {
+    @apply h-screen;
+  }
+}
+
+footer {
+  @apply text-center;
+  @apply bg-gray-800/70;
+  @apply text-gray-50;
+  @apply text-sm;
+  @apply py-4;
+  @apply shadow-inner;
 }
