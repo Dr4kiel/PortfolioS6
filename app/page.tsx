@@ -1,4 +1,6 @@
 import Image from "next/image";
+import logoGys from "../public/images/logo-gys.png";
+import photoProfil from "../public/images/photo-profil.webp";
 
 export default function Home() {
 	return (
@@ -25,7 +27,7 @@ export default function Home() {
 					</div>
 				</div>
 				<Image
-					src="/images/photo-profil.webp"
+					src={photoProfil}
 					alt="Picture of the author"
 					className="rounded-full border-4 border-gray-900 shadow-lg bg-gray-100"
 					width={200}
@@ -35,7 +37,7 @@ export default function Home() {
 			<div id="alternance-GYS" className="flex flex-col bg-slate-100 py-10 px-5 h-screen justify-around">
 				<div className="flex-dynamic-reversed items-center justify-around">
 					<Image
-						src="/images/logo-gys.png"
+						src={logoGys}
 						alt="Logo GYS"
 						className="border-1 bg-slate-500 p-1 my-2 size-fit flex"
 						width={200}
