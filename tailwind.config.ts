@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "dragon-img": "url('/images/dragon-bg.webp')", 
+        "dragon-img": "url('/dragon-bg.webp')",
       },
     },
   },
