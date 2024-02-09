@@ -72,6 +72,41 @@ body {
   /* Add smooth transition */
 }
 
+.skill-card {
+  @apply bg-white;
+  @apply shadow-md;
+  @apply rounded-lg;
+  @apply p-4;
+  @apply m-4;
+  @apply text-center;
+  @apply justify-center;
+  @apply items-center;
+
+  animation-name: out-card;
+  animation-duration: 0.3s;
+}
+
+.skill-card:hover {
+  animation-name: in-card;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  /* Add smooth transition */
+
+}
+
+@keyframes out-card {
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes in-card {
+  to {
+    transform: scale(1.05);
+  }
+}
+
+
 .nav-sticked {
   @apply fixed;
   @apply top-0;

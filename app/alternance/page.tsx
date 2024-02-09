@@ -30,22 +30,31 @@ export default function Alternance() {
                         </div>
                     </div>
                 </div>
-                <div className="grid col-span-3 bg-black py-0.5"></div>
                 <div className="grid md:grid-cols-3 h-screen">
-                    <div className="col-span-3 bg-white flex flex-col">
+                    <div className="col-span-3 flex flex-col">
                         <div className="flex flex-col my-2">
-                            <h1 className="font-bold text-3xl text-white bg-black/70 size-fit self-center p-2 rounded-full">Technologies Apprises</h1>
+                            <h1 className="font-bold sm:text-3xl text-white bg-black/70 size-fit self-center p-2 rounded-full">Technologies Apprises</h1>
                         </div>
-                        <div className="grid w-full h-full bg-blue-400">
-                            <div className="grid grid-cols-3">
-                                <div className="flex flex-col justify-center text-center">1</div>
-                                <div className="flex flex-col justify-center text-center">2</div>
-                                <div className="flex flex-col justify-center text-center">3</div>
-                            </div>
-                            <div className="grid grid-cols-3">
-                                <div className="flex flex-col justify-center text-center">4</div>
-                                <div className="flex flex-col justify-center text-center">5</div>
-                                <div className="flex flex-col justify-center text-center">6</div>
+                        <div className="grid w-full h-full">
+                            <div className="grid md:grid-cols-3 gap-2">
+                                <div className="grid grid-rows-2 justify-center skill-card">
+                                    <div className="flex flex-col justify-center"><Image src="/illustrations/java-logo.png" alt="Java" width={100} height={100} className="scale-[2] self-center" /></div>
+                                    <p className="p-2 text-justify">Le langage Java est largement utilisé pour les logiciels métiers et reste une valeur sure en matière de dévloppement.
+                                        J'ai développé, lors de mon alternance, des modules à installer sur un robot collaboratif afin de réaliser des
+                                        opérations de sidérurgie.</p>
+                                </div>
+                                <div className="grid grid-rows-2 skill-card">
+                                    <div className="flex flex-col justify-center"><Image src="/illustrations/cpp-logo.png" alt="C++" width={100} height={100} className="self-center" /></div>
+                                    <p className="p-2 text-justify">Le C++ est un langage de programmation orienté objet, très puissant et performant. J'ai utilisé ce langage
+                                        pour développer un logiciel de sniffer de bus CAN. Un autre projet sur lequel j'ai travaillé c'est un logiciel de monitoring pour
+                                        les appareils de soudures.</p>
+                                </div>
+                                <div className="grid grid-rows-2 skill-card">
+                                    <div className="flex flex-col justify-center"><Image src="/illustrations/qt-logo.png" alt="Qt" width={100} height={100} className="self-center" /></div>
+                                    <p className="p-2 text-justify">Qt est un framework de développement d'interfaces graphiques multiplateformes.
+                                        J'ai utilisé Qt pour toutes les application logicielles fait en C++ soit : le sniffer de bus CAN, le logiciel de monitoring d'appareil de soudure
+                                        mais également un logiciel permettant de créer et modifier des configurations de soudages semblable à Excel en plus simple et orienté métier.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
