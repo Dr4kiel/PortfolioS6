@@ -33,7 +33,7 @@ export default function RootLayout({
           {children}
         </div>
         <footer>
-          <p>© 2021 Tristan GAUTIER</p>
+          <p>© 2024 Tristan GAUTIER</p>
         </footer>
       </body>
     </html>
