@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
 	return (
@@ -24,23 +25,25 @@ export default function Home() {
 						</p>
 					</div>
 				</div>
-				<Image
-					src="/images/photo-profil.webp"
-					alt="Picture of the author"
-					className="rounded-full border-4 border-gray-900 shadow-lg bg-gray-100"
-					width={200}
-					height={200}
-				/>
+				<div className="flex flex-col relative w-[30vh] h-[40vh]">
+					<Image
+						src="/images/photo-profil.webp"
+						alt="Picture of the author"
+						className="rounded-full border-4 border-gray-900 shadow-lg bg-gray-100"
+						fill={true}
+					/>
+				</div>
 			</div>
 			<div id="alternance-GYS" className="flex flex-col bg-slate-100 py-10 px-5 h-screen justify-around">
 				<div className="flex-dynamic-reversed items-center justify-around">
-					<Image
-						src="/images/logo-gys.png"
-						alt="Logo GYS"
-						className="border-1 bg-slate-500 p-1 my-2 size-fit flex"
-						width={200}
-						height={200}
-					/>
+					<div className="flex flex-col relative w-[30vh] h-[30vh] m-2">
+						<Image
+							src="/images/logo-gys.png"
+							alt="Logo GYS"
+							className="border-1 bg-slate-500 p-1 my-2 size-fit rounded"
+							fill={true}
+						/>
+					</div>
 					<div className="flex flex-col w-4/6">
 						<div className="justify-center flex flex-col">
 							<h2 className="text-lg font-bold">Alternance GYS</h2>
@@ -52,7 +55,9 @@ export default function Home() {
 							</p></div>
 					</div>
 				</div>
-				<div className="font-bold text-lg flex place-content-end text-cyan-500 underline justify-end"><a href="/alternance">Alternance ➜</a></div>
+				<div className="font-bold text-lg flex place-content-end justify-end">
+					<Link href="/alternance" className="link">Alternance ➜</Link>
+				</div>
 			</div>
 			<div id="portfolio" className="flex-dynamic-reversed justify-around px-5 py-2 bg-slate-200 h-screen">
 				<div className="text-pretty flex flex-col justify-center">
@@ -64,16 +69,16 @@ export default function Home() {
 					<h2 className="font-bold text-center mb-2">Compétences</h2>
 					<div className="flex flex-col">
 						<div className="flex justify-center">
-							<a href="/portfolio/but2">
+							<Link href="/portfolio/but2">
 								<div id="but2" className="border-2 border-black rounded-full size-40 mx-2 flex justify-center flex-wrap content-center text-xl round-button">BUT2</div>
-							</a>
-							<a href="/portfolio/but3">
+							</Link>
+							<Link href="/portfolio/but3">
 								<div id="but3" className="border-2 border-black rounded-full size-40 mx-2 flex justify-center flex-wrap content-center text-xl round-button">BUT3</div>
-							</a>
+							</Link>
 						</div>
-						<a href="/portfolio/projets" className="justify-center flex">
+						<Link href="/portfolio/projets" className="justify-center flex">
 							<div id="projets" className="border-2 border-black rounded-full size-40 m-2 flex justify-center flex-wrap content-center text-xl round-button">Projets</div>
-						</a>
+						</Link>
 					</div>
 				</div>
 			</div>

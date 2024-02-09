@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Link from "next/link";
+import Image from "next/image";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -19,12 +21,12 @@ export default function RootLayout({
       <body className={`${inter.className} antialiased`}>
         <nav id="toolbar" className="flex items-center justify-between px-5 py-2 bg-gray-900 text-white nav-sticked">
           <div className="flex justify-items-start">
-            <a href="/"><img src="/logo.svg" alt="Logo" className="h-10 w-30" /></a>
+            <Link href="/" className="relative w-[10vh] h-[4vh]"><Image src="/logo.svg" alt="Logo" className="h-10 w-30" layout="fill" /></Link>
           </div>
           <div className="flex items-center">
-            <a href="/alternance" className="mr-4">Alternance</a>
-            <a href="/portfolio" className="mr-4">Portfolio</a>
-            <a href="/contact">Contact</a>
+            <Link href="/alternance" className="mr-4">Alternance</Link>
+            <Link href="/portfolio" className="mr-4">Portfolio</Link>
+            <Link href="/contact">Contact</Link>
           </div>
         </nav>
         <div className="mt-32">
