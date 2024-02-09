@@ -13,6 +13,8 @@ Les technologies utilisées sont :
 - NextJS
 - TailwindCSS
 - ESLint
+- Nginx
+- Pm2
 
 ---
 
