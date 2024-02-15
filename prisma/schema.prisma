@@ -1,0 +1,50 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Annee {
+  id        Int        @id @default(autoincrement())
+  annee     String
+  semestres Semestre[]
+}
+
+model Semestre {
+  id                     Int                     @id @default(autoincrement())
+  semestre               String
+  annee                  Annee                   @relation(fields: [anneeId], references: [id])
+  anneeId                Int
+  apprentissageCritiques ApprentissageCritique[]
+}
+
+model ApprentissageCritique {
+  id           Int        @id @default(autoincrement())
+  titre        String
+  competence   Competence @relation(fields: [competenceId], references: [id])
+  semestre     Semestre[]
+  competenceId Int        @default(1)
+  semestreId   Int
+  niveauActuel Int        @default(0)
+  criteres     Critere[]
+}
+
+model Critere {
+  id                      Int                     @id @default(autoincrement())
+  critere                 String
+  niveauAcceptabilite     Int
+  apprentissageCritique   ApprentissageCritique[]
+  apprentissageCritiqueId Int
+}
+
+model Competence {
+  id                    Int                     @id @default(autoincrement())
+  competence            String
+  apprentissageCritique ApprentissageCritique[]
+}
