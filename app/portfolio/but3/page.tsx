@@ -77,17 +77,17 @@ export default function Page() {
                                         <h2 className="title">{semestre.semestre}</h2>
 
                                         {
-                                            Array.from([0, 1, 5]).map((i) => (
+                                            competences.map((competence) => (
                                                 <div className="grid grid-rows">
                                                     <div className="grid grid-flow-col">
                                                         <div className="flex justify-around">
                                                             <div className="text-xl text-white m-5 text-center self-center">
-                                                                {competences[i].competence}
+                                                                {competence.competence}
                                                             </div>
                                                         </div>
                                                         {
                                                             semestre.apprentissageCritiques.map((apprentissage, index3) => {
-                                                                if (apprentissage.competence.id == i + 1) {
+                                                                if (apprentissage.competence.id == competence.id) {
                                                                     return (
                                                                         <div className="bg-gray-800 rounded m-1 p-3">
                                                                             <div className="text-white mb-5 text-center font-bold">{apprentissage.titre}</div>
