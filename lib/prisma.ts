@@ -43,3 +43,12 @@ export const getDatasByYear = async (year: string) => {
         }
     });
 }
+
+export const getCompetence = async () => {
+    return await prisma.competence.findMany({
+        select: {
+            id: true,
+            competence: true,
+        }
+    });
+}
