@@ -1,9 +1,35 @@
-"use client"
+'use client'
 import { useEffect, useState } from "react";
 
+interface Data {
+    semestres: Semestre[];
+}
+
+interface Semestre {
+    semestre: string;
+    apprentissageCritiques: ApprentissageCritique[];
+}
+
+interface ApprentissageCritique {
+    competence: Competence;
+    titre: string;
+    criteres: Critere[];
+    niveauActuel: number;
+}
+
+interface Competence {
+    id: number;
+    competence: string;
+}
+
+interface Critere {
+    critere: string;
+    niveauAcceptabilite: number;
+}
+
 export default function Page() {
-    const [datas, setDatas] = useState([]);
-    const [competences, setCompetences] = useState([]);
+    const [datas, setDatas] = useState<Data[]>([]);
+    const [competences, setCompetences] = useState<Competence[]>([]);
 
     async function getDatas() {
         await fetch("/api/portfolio/but3")
