@@ -79,17 +79,18 @@ export default function Page() {
                                         {
                                             competences.map((competence) => (
                                                 <div className="grid grid-rows">
-                                                    <div className="grid grid-flow-col">
-                                                        <div className="flex justify-around">
+                                                    <div className="grid grid-cols-6">
+                                                        <div className="flex justify-around col-span-1">
                                                             <div className="text-xl text-white m-5 text-center self-center">
                                                                 {competence.competence}
                                                             </div>
                                                         </div>
+                                                        <div className="col-span-5 grid grid-flow-col">
                                                         {
                                                             semestre.apprentissageCritiques.map((apprentissage, index3) => {
                                                                 if (apprentissage.competence.id == competence.id) {
                                                                     return (
-                                                                        <div className="bg-gray-800 rounded m-1 p-3">
+                                                                        <div className="bg-gray-800 rounded m-1 p-3 text-sm">
                                                                             <div className="text-white mb-5 text-center font-bold">{apprentissage.titre}</div>
                                                                             <div className="grid grid-rows-3 gap-2">
                                                                                 {
@@ -110,6 +111,7 @@ export default function Page() {
                                                                 }
                                                             })
                                                         }
+                                                        </div>
                                                     </div>
                                                 </div>
 
