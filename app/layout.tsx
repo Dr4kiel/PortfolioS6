@@ -29,6 +29,9 @@ export default function RootLayout({
             <Link href="/contact">Contact</Link>
           </div>
         </nav>
+        <div id="hierarchy">
+
+        </div>
         <div className="mt-32">
           {children}
         </div>
