@@ -4,7 +4,9 @@ import { NextResponse } from "next/server";
 
 export const GET = async (req: Request, res: Response) => {
     try {
-        const response = await getCompetence();
+        const annee = req.url.split("/portfolio/")[1].split("/competence")[0];
+        console.log(annee);
+        const response = await getCompetence(annee);
         if(!response) {
             return NextResponse.json({message: "Error"}, {
                 status: 404,

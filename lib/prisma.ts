@@ -44,11 +44,25 @@ export const getDatasByYear = async (year: string) => {
     });
 }
 
-export const getCompetence = async () => {
-    return await prisma.competence.findMany({
-        select: {
-            id: true,
-            competence: true,
-        }
-    });
+export const getCompetence = async (annee: string) => {
+    if(annee === "but3") {
+        return await prisma.competence.findMany({
+            where: {
+                id: {
+                    in: [1, 2, 6]
+                }
+            },
+            select: {
+                id: true,
+                competence: true,
+            }
+        });
+    } else {
+        return await prisma.competence.findMany({
+            select: {
+                id: true,
+                competence: true,
+            }
+        });
+    }
 }

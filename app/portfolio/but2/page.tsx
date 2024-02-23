@@ -32,7 +32,7 @@ export default function Page() {
     const [competences, setCompetences] = useState<Competence[]>([]);
 
     async function getDatas() {
-        await fetch("/api/portfolio/but3")
+        await fetch("/api/portfolio/but2")
             .then((res) => res.json())
             .then((res) => {
                 setDatas(res.response);
@@ -40,7 +40,7 @@ export default function Page() {
     }
 
     async function getCompetence() {
-        await fetch("/api/portfolio/but3/competence/")
+        await fetch("/api/portfolio/but2/competence/")
             .then((res) => res.json())
             .then((res) => {
                 setCompetences(res.response);
