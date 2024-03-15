@@ -37,7 +37,7 @@ export default function RootLayout({
                   pathFragments.map(element => (
                     <>
                       <a href={`${getFullPath() + "/" + element}`} className="m-1 hover:underline">{element}</a>
-                      <p className="m-1"> > </p>
+                      <p className="m-1"> | </p>
                     </>
                   ))
                 }
