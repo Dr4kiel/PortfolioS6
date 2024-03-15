@@ -31,18 +31,6 @@ export default function RootLayout({
             <div className="flex justify-items-start">
               <Link href="/" className="relative w-[10vh] h-[4vh]"><Image src="/logo.svg" alt="Logo" className="h-10 w-30" layout="fill" /></Link>
             </div>
-            <div className="ml-10 flex self-center bg-gray-400/50 rounded-full px-3 py-1">
-              <div className="flex justify-between">
-                {
-                  pathFragments.map(element => (
-                    <>
-                      <a href={`${getFullPath() + "/" + element}`} className="m-1 hover:underline">{element}</a>
-                      <p className="m-1"> | </p>
-                    </>
-                  ))
-                }
-              </div>
-            </div>
           </div>
           <div className="flex items-center">
             <Link href="/alternance" className="mr-4">Alternance</Link>
