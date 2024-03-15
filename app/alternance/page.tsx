@@ -6,7 +6,7 @@ export default function Alternance() {
         <main className="relative">
             <div id="title" className="h-screen flex justify-center flex-col">
                 <h1 className="title text-center font-bold text-white">Alternance</h1>
-                <div className="bg-white mx-auto text-center rounded w-2/3">
+                <div className="bg-white mx-auto text-center rounded w-2/3 text-white">
                     Work In Progress
                 </div>
             </div>

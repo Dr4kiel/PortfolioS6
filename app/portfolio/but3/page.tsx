@@ -77,7 +77,7 @@ export default function Page() {
                     <div>
                       <div className="h-screen flex-col justify-center flex">
                         <h2 className="title">{semestre.semestre}</h2>
-                        <div className="bg-white mx-auto text-center rounded w-2/3">
+                        <div className="bg-white mx-auto text-center rounded w-2/3 text-white">
                           Work In Progress
                         </div>
                       </div>
