@@ -12,7 +12,7 @@ export default function Page() {
     const params = useParams();
 
     async function getLogs() {
-        await fetch(`/api/botbegue/${params.filename}`, { next: {revalidate: 0} })
+        await fetch(`/api/botbegue/${params.filename}`, { next: {revalidate: 0}, cache: "no-store" })
             .then((res) => res.json())
             .then((res) => {
                 setLogs(res.logs);

@@ -7,7 +7,7 @@ export default function Page() {
     const [datas, setDatas] = useState([]);
 
     async function getDatas() {
-        await fetch("/api/botbegue", { next: {revalidate: 0} })
+        await fetch("/api/botbegue", { next: {revalidate: 0}, cache: "no-store" })
             .then((res) => res.json())
             .then((res) => {
                 setDatas(res.files);
