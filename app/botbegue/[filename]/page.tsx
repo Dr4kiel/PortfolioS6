@@ -9,12 +9,10 @@ export default function Page() {
 
     let [logs, setLogs] = useState([]);
 
-    const { signal } = new AbortController();
-
     const params = useParams();
 
     async function getLogs() {
-        await fetch(`/api/botbegue/${params.filename}`, { signal })
+        await fetch(`/api/botbegue/${params.filename}`, { next: {revalidate: 0} })
             .then((res) => res.json())
             .then((res) => {
                 setLogs(res.logs);

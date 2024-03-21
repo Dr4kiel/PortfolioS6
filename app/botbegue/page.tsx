@@ -2,14 +2,12 @@
 
 import { useEffect, useState } from 'react';
 
-const { signal } = new AbortController();
-
 export default function Page() {
 
     const [datas, setDatas] = useState([]);
 
     async function getDatas() {
-        await fetch("/api/botbegue", { signal })
+        await fetch("/api/botbegue", { next: {revalidate: 0} })
             .then((res) => res.json())
             .then((res) => {
                 setDatas(res.files);
