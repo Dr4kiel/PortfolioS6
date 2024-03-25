@@ -7,8 +7,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "WIP Portfolio",
-  description: "Work in progress :> ",
+  title: "Tristan GAUTIER Informatique",
+  description: "Le site de Tristan GAUTIER, étudiant en informatique, actuellement Bac+3",
 };
 
 export default function RootLayout({
@@ -19,7 +19,7 @@ export default function RootLayout({
 
   let pathFragments = ['Home', "Test"];
 
-  function getFullPath() : String {
+  function getFullPath(): String {
     return "FullPath";
   }
 
