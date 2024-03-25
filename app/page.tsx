@@ -30,7 +30,8 @@ export default function Home() {
 						src="/images/photo-profil.webp"
 						alt="Picture of the author"
 						className="rounded-full border-4 border-gray-900 shadow-lg bg-gray-100"
-						fill={true}
+						width={400}
+						height={200}
 					/>
 				</div>
 			</div>
