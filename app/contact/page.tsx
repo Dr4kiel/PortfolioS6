@@ -8,7 +8,7 @@ export default function Page() {
     const [text, setText] = useState('');
     const [loading, setLoading] = useState(false);
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         if (!name || !email) {
@@ -50,7 +50,12 @@ export default function Page() {
 
     return (
         <main className=''>
-            <h1 className='title h-screen flex justify-center flex-col'>Contact</h1>
+            <div id="title" className="h-screen flex justify-center flex-col">
+                <h1 className="title text-center font-bold text-white">Contact</h1>
+                <div className="bg-white mx-auto text-center rounded w-2/3 text-white">
+                    Work In Progress
+                </div>
+            </div>
             <div className='flex content-center'>
                 <form action="" onSubmit={handleSubmit} className='bg-white h-screen grid w-svw'>
                     <div className='flex items-center justify-evenly row-span-1'>
