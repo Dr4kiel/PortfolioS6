@@ -4,6 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import "./globals.css";
 
+import LittleNavBar from "./components/LittleNavBar";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -16,12 +18,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
-  let pathFragments = ['Home', "Test"];
-
-  function getFullPath(): String {
-    return "FullPath";
-  }
 
   return (
     <html lang="fr" className="bg-dragon-img bg-no-repeat bg-cover min-h-screen h-lvh bg-fixed">
@@ -38,6 +34,8 @@ export default function RootLayout({
             <Link href="/contact">Contact</Link>
           </div>
         </nav>
+        {/* navigation menu for smaller screens, use little-nav class */}
+        <LittleNavBar />
         <div id="hierarchy">
 
         </div>

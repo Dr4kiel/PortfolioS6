@@ -123,6 +123,16 @@ body {
   @apply shadow-md;
 }
 
+.little-nav {
+  @apply hidden;
+  @apply bg-gray-800;
+  @apply text-gray-50;
+  @apply text-sm;
+  @apply py-2;
+  @apply px-4;
+  @apply shadow-md;
+}
+
 .round-button:hover {
   @apply bg-blue-500;
   color: white;
@@ -168,6 +178,11 @@ footer {
   .nav-sticked {
     display: none;
     /* Hide navigation for smaller screens */
+  }
+
+  .little-nav {
+    display: block;
+    /* Show little navigation for smaller screens */
   }
 
   .round-button {

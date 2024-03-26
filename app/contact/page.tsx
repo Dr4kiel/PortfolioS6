@@ -60,11 +60,11 @@ export default function Page() {
                 <form action="" onSubmit={handleSubmit} className='bg-white h-screen grid w-svw'>
                     <div className='flex items-center justify-evenly row-span-1'>
                         <label htmlFor="name" id='name-label' className='text-xl'>Votre Nom*</label>
-                        <input type="text" id="name" value={name} className='bg-blue-100 w-[50%] h-[15%] rounded' onChange={(e) => setName(e.target.value)} />
+                        <input type="text" id="name" value={name} className='bg-blue-100 w-[50%] h-[15%] rounded py-3' onChange={(e) => setName(e.target.value)} />
                     </div>
                     <div className='flex items-center justify-evenly row-span-2'>
                         <label htmlFor="email" id='email-label' className='text-xl'>Votre Email*</label>
-                        <input type="email" id="email" value={email} className='bg-blue-100 w-[50%] h-[10%] rounded' onChange={(e) => setEmail(e.target.value)} />
+                        <input type="email" id="email" value={email} className='bg-blue-100 w-[50%] h-[10%] rounded py-3' onChange={(e) => setEmail(e.target.value)} />
                     </div>
                     <div className='flex items-center justify-evenly row-span-2'>
                         <label htmlFor="text" id='text-label' className='text-xl'>Votre Message*</label>
