@@ -56,8 +56,8 @@ export default function Page() {
                     Work In Progress
                 </div>
             </div>
-            <div className='flex content-center'>
-                <form action="" onSubmit={handleSubmit} className='bg-white h-screen grid w-svw'>
+            <div className='content-center w-lvw'>
+                <form action="" onSubmit={handleSubmit} className='bg-white h-screen grid'>
                     <div className='flex items-center justify-evenly row-span-1'>
                         <label htmlFor="name" id='name-label' className='text-xl'>Votre Nom*</label>
                         <input type="text" id="name" value={name} className='bg-blue-100 w-[50%] h-[15%] rounded py-3' onChange={(e) => setName(e.target.value)} />

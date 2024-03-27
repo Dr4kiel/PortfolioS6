@@ -8,7 +8,7 @@ export default function Home() {
 				<h1 className="title rounded-full bg-black/70 p-5">Tristan GAUTIER</h1>
 			</div>
 			<div id="initial-presentation" className="flex-dynamic justify-around items-center px-5 py-2 bg-white h-screen">
-				<div className="m-5 w-4/6">
+				<div className="m-10 w-4/6">
 					<h1 className="text-lg font-bold">Présentation</h1>
 					<div className="text-pretty flex flex-col">
 						<p>

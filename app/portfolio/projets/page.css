@@ -1,0 +1,44 @@
+#corps {
+    font-size: 14px;
+    font-family: 'Verdana', sans-serif;
+}
+
+#project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 1vh;
+    flex-direction: column;
+    @apply mx-2;
+    @apply p-2;
+}
+
+.project-link {
+    @apply bg-yellow-300;
+    @apply shadow-md;
+    @apply ml-2;
+}
+
+#project-link-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 1vh;
+    flex-direction: column;
+}
+
+#project-list-title {
+    @apply text-xl;
+    @apply text-balance;
+}
+
+@media screen and (min-width: 768px) {
+
+    /* keep the size for 768px */
+    #project-list {
+        width: 746px;
+        /* center */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
