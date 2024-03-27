@@ -70,11 +70,6 @@
     justify-content: space-around;
 }
 
-img {
-    width: 150px;
-    height: 150px;
-}
-
 .text-wrapper {
     @apply bg-yellow-300;
     display: flex;
@@ -93,5 +88,10 @@ img {
         /* center */
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .project-content {
+        display: grid;
+        @apply grid-cols-2
     }
 }
