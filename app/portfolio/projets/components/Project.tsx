@@ -2,8 +2,14 @@
 import './Project.css';
 
 export default function Project(_props: any) {
+
+    let generateID = () => {
+        // create an ID for the object based on the title => remove spaces and lowercase
+        return _props.title.replace(/\s/g, '').toLowerCase();
+    }
+
     return (
-        <div id='projet1' className='project bg-blue-500'>
+        <div id={generateID()} className='project bg-blue-500'>
             <h2 className='project-title'>{_props.title}</h2>
             <div className='project-content'>
                 <div className='img-wrapper'>
