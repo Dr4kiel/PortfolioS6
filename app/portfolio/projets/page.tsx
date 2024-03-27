@@ -1,4 +1,5 @@
 // css for the page
+import Project from './components/Project';
 import './page.css';
 
 export default function Page() {
@@ -12,42 +13,24 @@ export default function Page() {
                     <a href="#projet3" className="project-link">Projet 3</a>
                 </div>
             </div>
-            <div id='projet1' className='project bg-blue-500'>
-                <h2 className='project-title'>Projet 1</h2>
-                <div className='project-content'>
-                    <div className='img-wrapper'>
-                        <img src='https://via.placeholder.com/300x150' alt='placeholder' />
-                    </div>
-                    <div className='text-wrapper'>
-                        <p className='project-description'>Description du projet 1</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-            </div>
-            <div id='projet2' className='project bg-blue-500'>
-                <h2 className='project-title'>Projet 2</h2>
-                <div className='project-content'>
-                    <div className='img-wrapper'>
-                        <img src='https://via.placeholder.com/300x150' alt='placeholder' />
-                    </div>
-                    <div className='text-wrapper'>
-                        <p className='project-description'>Description du projet 2</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-            </div>
-            <div id='projet3' className='project bg-blue-500'>
-                <h2 className='project-title'>Projet 3</h2>
-                <div className='project-content'>
-                    <div className='img-wrapper'>
-                        <img src='https://via.placeholder.com/300x150' alt='placeholder' />
-                    </div>
-                    <div className='text-wrapper'>
-                        <p className='project-description'>Description du projet 3</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-            </div>
+            <Project
+                title="Projet 1"
+                title_desc="Description Projet 1"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor."
+                img="https://via.placeholder.com/300x150"
+            />
+            <Project
+                title="Projet 2"
+                title_desc="Description Projet 2"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor."
+                img="https://via.placeholder.com/300x150"
+            />
+            <Project
+                title="Projet 3"
+                title_desc="Description Projet 3"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor."
+                img="https://via.placeholder.com/300x150"
+            />
         </main>
     )
 }
