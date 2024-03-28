@@ -39,7 +39,7 @@ export default function Page() {
                     {projects.length > 0 ? (projects.map((project: Project) => {
                         return <li><a href={`#${project.id}`} className="project-link">{project.title}</a></li>
                     })) :
-                        <div className='loading'>
+                        <div className='loading absolute left-[30%] top-[10%]'>
                             <h1>Loading ...</h1>
                             <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
                         </div>}
