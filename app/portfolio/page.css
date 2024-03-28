@@ -1,0 +1,61 @@
+.menu-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 1vh;
+    margin-top: 2vh;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2vh;
+}
+
+.portfolio-button {
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    color: #343a40;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 90%;
+}
+
+.portfolio-button:hover {
+    background-color: #343a40;
+    color: #f8f9fa;
+}
+
+.button-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1vh;
+    text-align: center;
+}
+
+.button-text {
+    font-size: 0.9rem;
+    text-align: justify;
+}
+
+@media screen and (min-width: 768px) {
+    .menu-list {
+        @apply grid;
+        @apply grid-cols-3;
+    }
+
+    #but3-button {
+        @apply col-start-3;
+    }
+
+    #projets-button {
+        @apply col-start-2;
+        @apply row-start-3;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    #main-title {
+        @apply h-screen;
+    }
+}
