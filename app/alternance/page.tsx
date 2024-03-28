@@ -26,7 +26,7 @@ export default function Alternance() {
                     </div>
                     <div className="col-span-2 flex justify-center">
                         <div className="container m-auto rounded bg-white p-3 size-fit">
-                            <Image src="/images/gys-batiment.jpg" alt="GYS" width={800} height={600} className="w-[100vh] h-[40vh] rounded" />
+                            <Image src="/images/gys-batiment.jpg" alt="GYS" width={800} height={600} className="rounded object-scale-down" />
                         </div>
                     </div>
                 </div>

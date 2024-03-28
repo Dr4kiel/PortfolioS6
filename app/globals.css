@@ -106,13 +106,6 @@ body {
   }
 }
 
-.competence {
-  @apply bg-gray-600;
-  @apply rounded;
-  @apply py-3;
-  @apply px-7;
-}
-
 
 .nav-sticked {
   @apply fixed;
