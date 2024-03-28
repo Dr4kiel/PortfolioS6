@@ -39,6 +39,15 @@
     @apply text-balance;
 }
 
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40vh;
+    flex-direction: column;
+    @apply my-52;
+}
+
 @media screen and (min-width: 768px) {
 
     /* keep the size for 768px */

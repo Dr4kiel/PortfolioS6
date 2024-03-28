@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import '../../components/LoadingSpinner.css';
 
 interface Data {
   semestres: Semestre[];
@@ -110,10 +111,10 @@ export default function Page() {
                                                     className={
                                                       "text-white text-justify p-1 " +
                                                       (critere.niveauAcceptabilite ==
-                                                      apprentissage.niveauActuel
+                                                        apprentissage.niveauActuel
                                                         ? colorForLevel(
-                                                            critere.niveauAcceptabilite
-                                                          )
+                                                          critere.niveauAcceptabilite
+                                                        )
                                                         : "")
                                                     }
                                                   >
@@ -140,7 +141,10 @@ export default function Page() {
             );
           })
         ) : (
-          <p className="bg-white">Loading...</p>
+          <div className='loading'>
+            <h1>Loading ...</h1>
+            <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
+          </div>
         )
       }
     </main>

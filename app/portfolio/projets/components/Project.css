@@ -25,8 +25,11 @@
 .img-wrapper {
     @apply bg-blue-500;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-around;
+    position: relative;
+    @apply py-[50%];
+    ;
 }
 
 .text-wrapper {
@@ -37,6 +40,7 @@
     gap: 1vh;
     flex-direction: column;
     text-align: justify;
+    position: relative;
 }
 
 @media screen and (min-width: 768px) {

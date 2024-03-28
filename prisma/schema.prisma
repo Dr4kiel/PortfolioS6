@@ -48,3 +48,11 @@ model Competence {
   competence            String
   apprentissageCritique ApprentissageCritique[]
 }
+
+model Project {
+  id        Int      @id @default(autoincrement())
+  title     String
+  title_desc String
+  description String
+  img      String
+}
