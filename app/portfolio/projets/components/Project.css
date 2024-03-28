@@ -1,5 +1,4 @@
 .project {
-    @apply bg-gray-200;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -9,11 +8,17 @@
 }
 
 .project-title {
-    @apply bg-green-500;
+    @apply bg-white;
+    /* @apply bg-green-500; */
+    text-align: center;
+    @apply py-2;
+    @apply text-2xl;
+    @apply font-bold;
+    @apply rounded;
 }
 
 .project-content {
-    @apply bg-red-500;
+    /* @apply bg-red-500; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -23,24 +28,40 @@
 }
 
 .img-wrapper {
-    @apply bg-blue-500;
+    /* @apply bg-blue-500; */
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-around;
     position: relative;
-    @apply py-[50%];
+    @apply py-[30%];
     ;
 }
 
 .text-wrapper {
-    @apply bg-yellow-300;
+    @apply bg-white;
+    @apply rounded;
+    /* @apply bg-yellow-300; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1vh;
+    flex-direction: column;
+    text-align: justify;
+    position: relative;
+    padding: 2vh;
+    ;
+}
+
+.project-title-description {
+    /* @apply bg-pink-500; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1vh;
     flex-direction: column;
-    text-align: justify;
-    position: relative;
+    text-align: center;
+    @apply py-2;
+    @apply text-lg;
 }
 
 @media screen and (min-width: 768px) {
