@@ -45,7 +45,7 @@ export const getDatasByYear = async (year: string) => {
 }
 
 export const getCompetence = async (annee: string) => {
-    if(annee === "but3") {
+    if (annee === "but3") {
         return await prisma.competence.findMany({
             where: {
                 id: {
@@ -65,4 +65,8 @@ export const getCompetence = async (annee: string) => {
             }
         });
     }
+}
+
+export const getProjects = async () => {
+    return await prisma.project.findMany();
 }

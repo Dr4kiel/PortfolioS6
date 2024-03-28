@@ -1,0 +1,73 @@
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1vh;
+    flex-direction: column;
+    @apply p-2;
+}
+
+.project-title {
+    @apply bg-white;
+    /* @apply bg-green-500; */
+    text-align: center;
+    @apply py-2;
+    @apply text-2xl;
+    @apply font-bold;
+    @apply rounded;
+}
+
+.project-content {
+    /* @apply bg-red-500; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1vh;
+    flex-direction: column;
+    @apply py-2;
+}
+
+.img-wrapper {
+    /* @apply bg-blue-500; */
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    position: relative;
+    @apply py-[30%];
+    ;
+}
+
+.text-wrapper {
+    @apply bg-white;
+    @apply rounded;
+    /* @apply bg-yellow-300; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1vh;
+    flex-direction: column;
+    text-align: justify;
+    position: relative;
+    padding: 2vh;
+    ;
+}
+
+.project-title-description {
+    /* @apply bg-pink-500; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1vh;
+    flex-direction: column;
+    text-align: center;
+    @apply py-2;
+    @apply text-lg;
+}
+
+@media screen and (min-width: 768px) {
+
+    .project-content {
+        display: grid;
+        @apply grid-cols-2
+    }
+}

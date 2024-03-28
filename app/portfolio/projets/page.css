@@ -1,0 +1,67 @@
+#corps {
+    font-size: 14px;
+    font-family: 'Verdana', sans-serif;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3vh;
+    flex-direction: column;
+    @apply mx-2;
+    @apply mb-5;
+}
+
+#project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 1vh;
+    flex-direction: column;
+    @apply p-2;
+    @apply shadow-md;
+    @apply rounded;
+}
+
+.project-link:hover {
+    @apply underline;
+}
+
+#project-list-title {
+    /* @apply bg-green-500; */
+    text-align: left;
+    @apply py-2;
+    @apply text-xl;
+    @apply font-bold;
+}
+
+#project-link-list {
+    /* @apply bg-red-500; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1vh;
+    flex-direction: column;
+    list-style-type: disc;
+    @apply py-2;
+    @apply ml-4;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40vh;
+    flex-direction: column;
+    @apply my-52;
+}
+
+@media screen and (min-width: 768px) {
+
+    /* keep the size for 768px */
+    #project-list {
+        width: 746px;
+        /* center */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

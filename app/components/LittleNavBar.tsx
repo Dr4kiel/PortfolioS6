@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function LittleNavBar(_props: any) {
     return (
-        <nav id="little-nav" className="flex items-center justify-between px-5 py-2 bg-gray-900 text-white little-nav">
+        <nav id="little-nav" className="flex items-center justify-between px-5 py-2 bg-gray-900 text-white little-nav nav-sticked">
             <div className="flex justify-between">
                 <div className="flex justify-items-start">
                     <Link href="/" className="relative w-[10vh] h-[4vh]"><Image src="/logo.svg" alt="Logo" className="h-10 w-30" layout="fill" /></Link>
